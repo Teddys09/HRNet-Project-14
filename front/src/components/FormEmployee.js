@@ -1,20 +1,45 @@
 import React from 'react';
 import { State } from '../utils/state';
+import { Department } from '../utils/department';
 import { useDispatch, useSelector } from 'react-redux';
-import { addFirstName } from '../utils/store';
+import { addEmployee } from '../utils/store';
 
 const FormEmployee = () => {
   const dispatch = useDispatch();
-  const firstName = useSelector((state) => state.newEmployee.firstName);
+  const firstName = useSelector((state) => state.employees.employee);
   console.log(firstName);
+  // console.log(firstName);
   function handleSubmit(e) {
     e.preventDefault();
+    let employeeAlreadyExists = false;
 
-    console.log(e.target);
-
-    console.log(e.target.firstName.value);
-
-    dispatch(addFirstName(e.target.firstName.value));
+    const formValues = {
+      firstName: e.target.firstName.value,
+      lastName: e.target.lastName.value,
+      dateOfBirth: e.target.dateOfBirth.value,
+      startDate: e.target.startDate.value,
+      adress: {
+        street: e.target.street.value,
+        city: e.target.city.value,
+        state: e.target.state.value,
+        zip: e.target.zip.value,
+      },
+      department: e.target.department.value,
+    };
+    firstName.forEach((element) => {
+      console.log(element);
+      if (
+        element.firstName === formValues.firstName &&
+        element.lastName === formValues.lastName &&
+        element.dateOfBirth === formValues.dateOfBirth
+      ) {
+        alert('This employee already exists');
+        employeeAlreadyExists = true;
+      }
+    });
+    if (!employeeAlreadyExists) {
+      dispatch(addEmployee(formValues));
+    }
   }
 
   return (
@@ -68,11 +93,11 @@ const FormEmployee = () => {
       <div className="form-group">
         <label htmlFor="department">Department</label>
         <select className="form-control" id="department">
-          <option value="Sales">Sales</option>
-          <option value="Marketing">Marketing</option>
-          <option value="Engineering">Engineering</option>
-          <option value="Human Ressources">Human Ressources</option>
-          <option value="Legal">Legal</option>
+          {Department.map((department) => (
+            <option key={department} value={department}>
+              {department}
+            </option>
+          ))}
         </select>
       </div>
       <input type="submit" className="save-button" value="Save" />

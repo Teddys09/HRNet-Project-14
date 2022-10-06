@@ -1,29 +1,22 @@
 import { configureStore, createSlice } from '@reduxjs/toolkit';
 
 // Create a slice of state for new employee data and actions to add user data
-const newEmployeeSlice = createSlice({
-  name: 'newEmployee',
+const employeeSlice = createSlice({
+  name: 'employees',
   initialState: {
-    firstName: '',
-    lastName: '',
-    dateOfBirth: '',
-    startDate: '',
-    street: '',
-    city: '',
-    state: '',
-    zip: '',
+    employee: [],
   },
   reducers: {
-    addFirstName: (state, action) => {
-      state.firstName = action.payload;
+    addEmployee(state, action) {
+      state.employee.push(action.payload);
     },
   },
 });
 
-export const { addFirstName } = newEmployeeSlice.actions;
+export const { addEmployee } = employeeSlice.actions;
 
 export const store = configureStore({
   reducer: {
-    newEmployee: newEmployeeSlice.reducer,
+    employees: employeeSlice.reducer,
   },
 });
