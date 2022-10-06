@@ -1,0 +1,99 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap');
+
+body {
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+a {
+  text-decoration: none;
+  color: #000;
+  font-weight: 500;
+}
+
+/* Header */
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+header a:hover {
+  /* make blue 2px underline on hover and grow*/
+  text-decoration: underline 3px #66b10d;
+  text-underline-offset: 4px;
+}
+
+.header-title {
+  font-size: 30px;
+  font-weight: 900;
+  background: linear-gradient(to bottom, #66b10d 39%, #141414 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.header-title-img {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.header-img img {
+  width: 50px;
+  height: 50px;
+}
+/* Footer */
+footer {
+  display: flex;
+
+  justify-content: center;
+  padding: 35px 0px;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  /* place it on the bottom of the page */
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background-color: #fff;
+  font-weight: 500;
+}
+
+/* Home */
+.home-section {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+  height: 80vh;
+}
+.home-section a {
+  width: 200px;
+  display: block;
+  height: 100px;
+  border-radius: 10px;
+  text-align: center;
+  line-height: 100px;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+/* make a grow on hover */
+.home-section a:hover {
+  transform: scale(1.1);
+  transition: all 0.5s ease-in-out;
+}
+
+/* Create Employee */
+.create-employee {
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+  height: 80vh;
+}
+.form-createEmployee {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
