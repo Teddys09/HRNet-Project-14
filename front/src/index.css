@@ -97,6 +97,25 @@ footer {
   flex-direction: column;
   gap: 10px;
 }
+.address-group {
+  border: solid 2px #c0c0c0;
+  padding: 10px;
+  z-index: 1;
+}
+.address-group label {
+  margin-top: 5px;
+}
+.address {
+  position: absolute;
+  top: -12%;
+  left: 8%;
+  padding: 0 4px;
+  z-index: 4;
+  background-color: white;
+}
+.wrapper-address {
+  position: relative;
+}
 
 /* Employee List */
 .search-bar {
