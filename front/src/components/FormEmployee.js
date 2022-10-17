@@ -3,6 +3,7 @@ import { State } from '../utils/state';
 import { Department } from '../utils/department';
 import { useDispatch, useSelector } from 'react-redux';
 import { addEmployee } from '../utils/store';
+import SelectMenu from './SelectMenu';
 
 const FormEmployee = () => {
   const dispatch = useDispatch();
@@ -41,6 +42,11 @@ const FormEmployee = () => {
       dispatch(addEmployee(formValues));
     }
   }
+  const test = {
+    name: 'testMenu',
+    id: 'testMenu',
+    options: ['test1', 'test2', 'test3'],
+  };
 
   return (
     <form
@@ -99,6 +105,7 @@ const FormEmployee = () => {
             </option>
           ))}
         </select>
+        <SelectMenu {...test} />
       </div>
       <input type="submit" className="save-button" value="Save" />
     </form>

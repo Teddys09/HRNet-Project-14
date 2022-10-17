@@ -5,15 +5,19 @@ const employeeSlice = createSlice({
   name: 'employees',
   initialState: {
     employee: [],
+    filteredEmployee: [],
   },
   reducers: {
     addEmployee(state, action) {
       state.employee.push(action.payload);
     },
+    filterEmployee(state, action) {
+      state.filteredEmployee = action.payload;
+    },
   },
 });
 
-export const { addEmployee } = employeeSlice.actions;
+export const { addEmployee, filterEmployee } = employeeSlice.actions;
 
 export const store = configureStore({
   reducer: {

@@ -97,3 +97,13 @@ footer {
   flex-direction: column;
   gap: 10px;
 }
+
+/* Employee List */
+.search-bar {
+  display: flex;
+  justify-content: flex-end;
+  padding-right: 10px;
+}
+.search-bar input {
+  padding: 5px;
+}
