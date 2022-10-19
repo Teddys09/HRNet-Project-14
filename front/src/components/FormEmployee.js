@@ -42,6 +42,7 @@ const FormEmployee = () => {
     });
     if (!employeeAlreadyExists) {
       dispatch(addEmployee(formValues));
+      alert('Employee added');
     }
   }
 
