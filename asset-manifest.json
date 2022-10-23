@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "/HRNet-Project-14/static/css/main.13a9110b.css",
+    "main.js": "/HRNet-Project-14/static/js/main.59c16087.js",
+    "static/media/Wealth.png": "/HRNet-Project-14/static/media/Wealth.02a5b16dbd89162d6249.png",
+    "index.html": "/HRNet-Project-14/index.html",
+    "main.13a9110b.css.map": "/HRNet-Project-14/static/css/main.13a9110b.css.map",
+    "main.59c16087.js.map": "/HRNet-Project-14/static/js/main.59c16087.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.13a9110b.css",
+    "static/js/main.59c16087.js"
+  ]
+}
