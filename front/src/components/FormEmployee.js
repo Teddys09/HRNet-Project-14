@@ -3,8 +3,7 @@ import { State } from '../utils/state';
 import { Department } from '../utils/department';
 import { useDispatch, useSelector } from 'react-redux';
 import { addEmployee } from '../utils/store';
-//import SelectMenu from './SelectMenu';
-//import SelectMenu from 'select_menu_teddystrumilo_oc/SelectMenu';
+
 import SelectMenu from 'select_menu_strumilo_oc/build/index';
 
 const FormEmployee = () => {

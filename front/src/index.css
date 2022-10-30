@@ -1,9 +1,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap');
-
+html {
+  height: 100%;
+}
 body {
   font-family: 'Roboto', sans-serif;
   margin: 0;
   padding: 0;
+  height: 100%;
+}
+#root {
+  min-height: 100%;
 }
 a {
   text-decoration: none;
@@ -49,8 +55,7 @@ footer {
   padding: 35px 0px;
   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
   /* place it on the bottom of the page */
-  position: fixed;
-  bottom: 0;
+  margin-top: auto;
   width: 100%;
   background-color: #fff;
   font-weight: 500;
@@ -85,7 +90,7 @@ footer {
 
   align-items: center;
   justify-content: center;
-  height: 80vh;
+  padding: 10% 0;
 }
 .form-createEmployee {
   display: flex;
